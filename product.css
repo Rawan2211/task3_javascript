@@ -1,0 +1,46 @@
+.dark-mode #card .card{
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
+ 
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    
+}
+body {
+    background-color: white;
+    color: black;
+}
+.btn{
+    border: none;
+    background-color: transparent;
+}
+.navbar{    
+    border-bottom: solid rgba(128, 128, 128, 0.289);
+}
+.navbar p {
+margin-left: 50px ;
+}
+.navbar .btn{
+    margin-right: 50px;
+}
+.card{
+    border: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#card{
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    margin-left: 350px;
+    margin-top: 30px;
+
+}
+#card .card .description,p,h3{
+    padding-left: 20px;
+    padding-top: 20px;
+}
