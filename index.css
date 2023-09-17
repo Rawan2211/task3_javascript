@@ -88,9 +88,17 @@ align-items: center;
     margin-top: 20px;
     min-height: 20px;
 }
-#cards .card .description{
-    min-height: 120px;
-    max-height: 120px;
+#cards .card button{
     margin-top: 20px;
-    margin-left: 20px;
+    width: 75%;
+margin-left: 30px;
+border: none;
+background-color: transparent;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.dark-mode #cards .card button{
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
+    border:thin white;
 }
