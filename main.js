@@ -23,7 +23,7 @@ return res;
         <img src=${values.images[0]} alt="" class="images img-fluid">
         <h3 class="title"> ${values.title} </h3>
         <p class="price"><span class="fw-bold">Price:</span> ${values.price}</p>    
-        <button id ="btn" onclick="showDetailsButton(${values.id})" >Show</button>
+        <button id ="btn" onclick="showDetailsButton(${values.id})" >Show Details</button>
 
     </div>`
 
