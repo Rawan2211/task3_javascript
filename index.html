@@ -15,7 +15,7 @@
 
 </head>
 <body>
-
+<div class="desktopwrapper">
 <div class="navbar align-items-center d-flex">
         <p class="fw-bold pt-3" >Products</p>
     <button class="btn fw-bold" onclick="myFunction()"> Dark Mode</button>
@@ -31,7 +31,26 @@
 
 
 </div>
+</div>
 
+<div class="mobilewrapper">
+
+    <div class="navbar align-items-center d-flex col-sm-10">
+        <p class="fw-bold pt-3" >Products</p>
+    <button class="btn fw-bold" onclick="myFunction()"> Dark Mode</button>
+    </div>
+    <div id="searchWrapper">
+        <i class="search-icon fa-solid fa-magnifying-glass"></i>
+        <input id="searchbar"  type="text" onkeyup="searchElement()"
+                name="search" placeholder="Search..." data-search>
+    </div>
+
+    <div id="mobileCards" class="mb-5" cards>
+        
+
+
+    </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
