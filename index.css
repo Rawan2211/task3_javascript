@@ -1,9 +1,16 @@
+html,body{
+    overflow-x: hidden;
+}
+
 .dark-mode #cards .card{
     background-color: black;
     color: white;
-    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
-
-    
+    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);    
+}
+.dark-mode #mobileCards .card{
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);    
 }
 .dark-mode #searchWrapper{    
     box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
@@ -27,56 +34,111 @@ body {
 .navbar{    
     border-bottom: solid rgba(128, 128, 128, 0.289);
 }
-.navbar p {
+.desktopwrapper .navbar p {
 margin-left: 50px ;
 }
-.navbar .btn{
+.mobilewrapper .navbar p {
+    margin-left: 10px ;
+    }
+.desktopwrapper .navbar .btn{
     margin-right: 50px;
 }
-.search-icon{
+.mobilewrapper .navbar .btn{
+    margin-right: 10px;
+}
+.desktopwrapper .search-icon{
 margin-left: 20px;
 color: rgba(128, 128, 128, 0.811);
 }
-#searchbar{
-background-color: transparent;
-border: none;
+.mobilewrapper .search-icon{
+    margin-left: 10px;
+    color: rgba(128, 128, 128, 0.811);
+}
+.desktopwrapper #searchbar{
 margin-left: 10px;
 width: 340px;
 }
+#searchbar{
+    background-color: transparent;
+    border: none;
+}
+.mobilewrapper #searchbar{
+    margin-left: 10px;
+    width: 140px;
+    }
+
 #searchWrapper{
-margin-top: 40px;
-margin-left: 50px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border: none;
-width: 400px;
-height: 50px;
-padding-top: 10px ;
-align-items: center;
-
 }
-.card{
+
+.desktopwrapper #searchWrapper{
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 400px;
+    height: 40px;
+    padding-top: 10px ;
+    align-items: center;
+    
+    }
+    .mobilewrapper #searchWrapper{
+        margin-top: 20px;
+        margin-left: 10%;
+        width: 250px;
+        height: 40px;
+        padding-top: 10px ;
+        align-items: center;
+        
+        }
+.desktopwrapper .card{
     margin-top: 50px;
     width: 20%;
-    max-height: 500px;
+    height: 400px;
     margin-left: 20px;
     border: transparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-#cards{
+.mobilewrapper .card{
+    margin-top: 30px;
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    border: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.desktopwrapper #cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 
 }
-#cards .card img{
+.mobilewrapper #cards{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.desktopwrapper #cards .card img{
     width: 100%;
     height: 40%;
     justify-content: center;
     margin-bottom: 10px;
 
 }
-#cards .card h3,p {
+.mobilewrapper #mobileCards .card img{
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+.desktopwrapper #cards .card h3,p {
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.mobilewrapper #mobileCards .card h3,p {
     padding-top: 10px;
     margin-left: 20px;
 }
@@ -88,7 +150,18 @@ align-items: center;
     margin-top: 20px;
     min-height: 20px;
 }
+
 #cards .card button{
+    margin-top: 20px;
+    width: 75%;
+margin-left: 30px;
+border: none;
+background-color: transparent;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#mobileCards .card button{
     margin-top: 20px;
     width: 75%;
 margin-left: 30px;
@@ -101,4 +174,22 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
     box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
     border:thin white;
+}
+.dark-mode #mobileCards .card button{
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(205, 201, 201, 0.19), 0 6px 20px 0 rgba(205, 201, 201, 0.19);
+    border:thin white;
+}
+
+@media screen and (max-width: 766px) {
+    .desktopwrapper {
+        display:none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .mobilewrapper {
+        display:none;
+
+    }
 }
