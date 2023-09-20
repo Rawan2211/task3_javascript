@@ -6,11 +6,13 @@ function myFunction() {
 function fetchFunction(){
 fetch("https://dummyjson.com/products").then((result) => {
 let myData = result.json();
+console.log(myData);
 return myData;
 
 }).then((myData) => {
 let res=  myData.products;
 res.length=28;
+console.log(res);
 return res;
 }).then((res) =>{
     let data="";
@@ -30,10 +32,47 @@ return res;
 
 }
 ).catch((err) =>{
-
+console.log(err);
 });
 }
 fetchFunction();
+
+
+
+function mobileFetchFunction(){
+    fetch("https://dummyjson.com/products").then((result) => {
+    let myData = result.json();
+    console.log(myData);
+    return myData;
+    
+    }).then((myData) => {
+    let res=  myData.products;
+    res.length=28;
+    console.log(res);
+    return res;
+    }).then((res) =>{
+        let data="";
+        res.map((values)=>{
+        
+    
+            data+=`<div class="card">
+            <img src=${values.images[0]} alt="" class="images img-fluid">
+            <h3 class="title"> ${values.title} </h3>
+            <p class="price"><span class="fw-bold">Price:</span> ${values.price}</p>    
+            <button id ="btn" onclick="showDetailsButton(${values.id})" >Show Details</button>
+    
+        </div>`
+    
+        })
+        document.getElementById("mobileCards").innerHTML=data;
+    
+    }
+    ).catch((err) =>{
+    console.log(err);
+    });
+    }
+    mobileFetchFunction();
+
 
 
 
@@ -63,10 +102,10 @@ function searchElement() {
 
 function showDetailsButton(idValue){
 
-
     window.location.href=`product.html?id=${idValue}`;
 
 };
+
 
 
 
