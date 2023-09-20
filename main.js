@@ -6,13 +6,11 @@ function myFunction() {
 function fetchFunction(){
 fetch("https://dummyjson.com/products").then((result) => {
 let myData = result.json();
-console.log(myData);
 return myData;
 
 }).then((myData) => {
 let res=  myData.products;
 res.length=28;
-console.log(res);
 return res;
 }).then((res) =>{
     let data="";
@@ -32,15 +30,10 @@ return res;
 
 }
 ).catch((err) =>{
-console.log(err);
+
 });
 }
 fetchFunction();
-
-
-// const searchParams = new URLSearchParams();
-// const queryString = searchParams.toString();
-// console.log(queryString);
 
 
 
@@ -67,10 +60,10 @@ function searchElement() {
 
 
 
-//const url  = 'product.html?id=Id';
+
 function showDetailsButton(idValue){
 
-    console.log(idValue);
+
     window.location.href=`product.html?id=${idValue}`;
 
 };
